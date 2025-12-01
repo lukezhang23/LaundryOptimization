@@ -1,28 +1,18 @@
-"""
-initialize_project.py
-
-This script runs all data_generation scripts needed to generate data and related artifacts.
-"""
-
 import subprocess
 import sys
 import os
 
-# Directory where this file is located
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-
 def run_script(script_name):
-    """Run a Python script (always relative to this script's directory)."""
     script_path = os.path.join(BASE_DIR, script_name)
     result = subprocess.run([sys.executable, script_path])
     if result.returncode != 0:
         print(f"Error: {script_name} failed with exit code {result.returncode}")
         sys.exit(result.returncode)
 
-
 if __name__ == "__main__":
-    run_script("generate_data.py")
-    run_script("generate_chart.py")
+    run_script("generate_final_chart.py")
+    run_script("pdf_to_png.py")
 
     print("All scripts ran successfully!")

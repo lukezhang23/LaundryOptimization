@@ -1,7 +1,7 @@
 """
 generate_chart.py
 
-This script creates a PDF called "schedule_chart.pdf" that displays schedules in a graphical manner.
+This script creates a PDF called "initial_schedule_chart.pdf" that displays schedules in a graphical manner.
 """
 
 import pandas as pd
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
 # --- Read CSV ---
-df = pd.read_csv("../data.csv")  # expects columns: name, start_time, end_time
+df = pd.read_csv("../data/data.csv")  # expects columns: name, start_time, end_time
 
 # --- Helper function to convert decimal hours to AM/PM string ---
 def decimal_to_ampm(decimal_hour):
@@ -30,7 +30,7 @@ def hour_label(h):
     return f"{display_hour}{suffix}"
 
 # --- PDF output ---
-pdf_file = "../schedule_chart.pdf"
+pdf_file = "initial_schedule_chart.pdf"
 with PdfPages(pdf_file) as pdf:
     # --- Plot setup ---
     row_height = 0.8

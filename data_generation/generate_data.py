@@ -62,7 +62,7 @@ def main():
         start_weights = pd.read_csv("seed/start_time_weights.csv")
         length_weights = pd.read_csv("seed/length_weights.csv")
 
-    with open("seed/names.csv", newline="") as infile, open("../data.csv", "w", newline="") as outfile:
+    with open("seed/names.csv", newline="") as infile, open("../data/data.csv", "w", newline="") as outfile:
         reader = csv.reader(infile)
         header = next(reader)  # skip header
 
