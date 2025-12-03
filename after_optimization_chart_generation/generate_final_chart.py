@@ -50,7 +50,7 @@ dry_duration = 0.5
 
 
 # --- PDF Output ---
-pdf_file = "../schedule_chart.pdf"
+pdf_file = "../4_4_schedule_chart.pdf"
 with PdfPages(pdf_file) as pdf:
     row_height = 0.8
     fig_height = len(df) * 1.2

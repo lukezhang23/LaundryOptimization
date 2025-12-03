@@ -6,5 +6,5 @@ Creates "schedule_chart.png" out of "schedule_chart.pdf" so it can be added to t
 
 from pdf2image import convert_from_path
 
-pages = convert_from_path('../schedule_chart.pdf', dpi=200)
-pages[0].save('../schedule_chart.png', 'PNG')  # saves first page as PNG
+pages = convert_from_path('../4_4_schedule_chart.pdf', dpi=200)
+pages[0].save('../4_4schedule_chart.png', 'PNG')  # saves first page as PNG
