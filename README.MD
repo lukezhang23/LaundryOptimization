@@ -11,4 +11,5 @@
 - #### [schedule_chart.pdf](schedule_chart.pdf): Graphical view of the optimized schedule in pdf form.
 - #### [schedule_chart.png](schedule_chart.png): Image of schedule chart.
 
+## Optimal Schedule:
 ![Schedule Chart](schedule_chart.png)
